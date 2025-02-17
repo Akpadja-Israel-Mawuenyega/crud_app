@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "root"; 
+$username = "root";
 $password = "";
 $dbname = "crud_app";
 
@@ -24,12 +24,13 @@ $result = $conn->query($sql);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUD Application</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <h1>User Management</h1>
-  <a href="create.php">Add User</a>
-  <table style="border: 1px solid gray;">
+  <h1>USER MANAGEMENT</h1>
+  <a class="add-user-btn" href="create.php">Add User</a>
+  <table>
     <tr>
       <th>ID</th>
       <th>Name</th>
@@ -43,14 +44,14 @@ $result = $conn->query($sql);
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $row['email']; ?></td>
           <td>
-            <a href="update.php?id=<?php echo $row['id']; ?>">Edit</a>
-            <a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+            <a class="edit-btn" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>
+            <a class="del-btn" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
           </td>
         </tr>
       <?php endwhile; ?>
     <?php else: ?>
       <tr>
-        <td colspan="4">No users found</td>
+        <td style="text-align: center;" colspan="4">No users found</td>
       </tr>
     <?php endif; ?>
   </table>

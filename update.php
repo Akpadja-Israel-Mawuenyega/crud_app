@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br>
         <input type="submit" value="Update User">
     </form>
-    <a href="index.php">Back to User List</a>
+    <a class="back-btn" href="index.php">Back to User List</a>
 </body>
 
 </html>
